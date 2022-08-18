@@ -1,0 +1,83 @@
+p{
+  margin: 0
+}
+
+.bg{
+  background: url('./images/background.png');
+  background-position: top;
+  background-repeat: repeat-x;
+}
+
+.container{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  padding: 2rem;
+}
+
+.filter_section{
+  width: 25%;
+  padding-right: 2rem;
+}
+
+.hotel_section{
+  width: 75%;
+  padding-left: 2rem;
+}
+
+/* media query breakpoint - source: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container{
+    display: block
+  }
+
+  .filter_section{
+    width: 100%;
+    padding:0;
+    padding-bottom: 2rem;
+  }
+  
+  .hotel_section{
+    width: 100%;
+    padding:0;
+
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .filter_section{
+    width: 8%;
+    padding-right: 1rem;
+  }
+  
+  .hotel_section{
+    width: 92%;
+    padding-left: 1rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .filter_section{
+    width: 25%;
+    padding-right: 2rem;
+  }
+  
+  .hotel_section{
+    padding-left: 2rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .filter_section{
+    width: 25%;
+    padding-right: 2rem;
+  }
+  
+  .hotel_section{
+    padding-left: 2rem;
+  }
+}

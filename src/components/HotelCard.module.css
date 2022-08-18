@@ -1,0 +1,159 @@
+.card{
+    background: white;
+    margin-bottom: 2rem
+}
+
+.info_container{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.image_container{
+    grid-column: 1;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+.image_container>img{
+    width: 100%;
+    visibility: hidden
+}
+
+.read_more_btn{
+    position: absolute;
+    bottom: 0;
+    background: white;
+    padding: 0.3rem 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color:#1e3885;
+    font-size: 0.9em;
+}
+
+.content_container{
+    grid-column: 2;
+    padding: 1rem;
+    line-height: 2rem;
+}
+
+.book_now_btn{
+    color:#17317f;
+    background: #fedd06;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.5rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+}
+
+.book_now_btn>p:nth-child(2){
+    font-size: 30px;
+}
+
+.overview{
+    height: 0;
+    overflow: hidden;
+}
+
+.expand{
+    animation: openInfo 1s;
+    padding: 1rem
+}
+
+.overview_heading{
+    margin-top: 0px;
+    color:#17317f;
+}
+
+.overview_text{line-height: 1.5rem;}
+
+.name_text{
+    color:#1e3885;
+    margin-bottom: 0px
+}
+
+.location_text{
+    color: #acacac
+}
+
+.rating_container{
+    display: flex;
+    margin: 5px 0px 15px
+}
+
+.rating{
+    font-size: 22px;
+    color: #fedd06;
+}
+
+.info_texts{
+    line-height: 1.5rem
+}
+
+.see_more_icon{
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.rotate{
+    transform: rotate(90deg);
+}
+
+p{
+    margin: 0
+}
+
+
+@keyframes openInfo {
+    from {
+        height: 0%;
+        opacity: 0
+    }
+    to {
+        height: 100%;
+        opacity:1
+    }
+}
+
+
+/* media query breakpoint -  source: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .image_container{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .info_container{
+        display: block
+    }
+
+    .content_container{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        text-align: center;
+        padding: 0
+    }
+
+    .rating_container{
+        justify-content: center
+    }
+
+    .overview_text{
+        text-align: justify;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .book_now_btn{
+        margin-top: 1rem;
+    }
+}

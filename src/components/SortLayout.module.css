@@ -1,0 +1,79 @@
+.container{
+    width: 100%;
+    margin: auto;
+    padding: 0
+}
+
+.container>.list:last-child{
+    border: none;
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 1rem;
+    color:#17317f;
+    cursor: pointer;
+    border-bottom: 2px solid #6b80bf
+}
+
+.list>span{
+    display: block
+}
+
+.list.active{
+    background: #17317f;
+    color: white;
+}
+
+.icons{
+    color: #8d8a8ab0;
+    font-size: 1.5rem;
+    
+}
+
+.icons.active{
+    color: white
+}
+
+p{
+    margin: 0
+  }
+
+/* media query breakpoint - source: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .image_container{
+        width: 100%;
+    }
+    .info_container{
+        display: block
+    }
+    .content_container{
+        width: 100%;
+        text-align: center
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .list>span{
+        display: none
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .list>span{
+        display: block
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .list>span{
+        display: block
+    }
+}
